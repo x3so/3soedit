@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Simple Addon</title>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/stremio-addon-sdk@latest/dist/sdk.min.js"></script>
+</head>
+<body>
+    <h1>Hello from My Stremio Addon!</h1>
+
+    <script type="text/javascript">
+        const sdk = new StremioSDK();
+
+        sdk.init({
+            name: "My Simple Addon",
+            version: "1.0.0",
+            author: "You",
+            description: "A simple addon for testing"
+        });
+
+        // Optional: Show a message
+        sdk.on("load", () => {
+            console.log("Addon loaded!");
+        });
+    </script>
+</body>
+</html>
